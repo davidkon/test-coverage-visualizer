@@ -14,23 +14,23 @@
 ---
 
 ## 📦 Project Structure
-
+```bash
 test-coverage-visualizer/
 ├── src/
-│ └── test_coverage_visualizer/
-│ ├── init.py
-│ ├── app.py
-│ └── example/
-│ ├── init.py
-│ └── math_utils.py
+    └── test_coverage_visualizer/
+        ├── init.py
+        ├── app.py
+└── example/
+    ├── init.py
+    └── math_utils.py
 ├── tests/
-│ └── test_math_utils.py
+    └── test_math_utils.py
 ├── pyproject.toml
 ├── README.md
 └── .github/
-└── workflows/
-└── ci.yml
-
+    └── workflows/
+        └── ci.yml
+```
 
 ---
 
@@ -41,14 +41,16 @@ test-coverage-visualizer/
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 2. Install in editable mode with dev dependencies:
-
+```bash
 pip install -e .[dev]
-
+```
 3. Run tests and generate coverage report:
-
+```bash
 pytest --cov=src/test_coverage_visualizer --cov-report=term-missing
+```
 
 ✅ Continuous Integration
 
@@ -77,7 +79,7 @@ CI checks include:
 📈 Example Output
 
 Sample output from pytest with coverage:
-
+```bash
 tests/test_math_utils.py ..                                                          [100%]
 
 Name                                                 Stmts   Miss  Cover
@@ -86,9 +88,12 @@ src/test_coverage_visualizer/app.py                     11     11     0%
 src/test_coverage_visualizer/example/math_utils.py       4      0   100%
 ------------------------------------------------------------------------
 TOTAL                                                   15     11    27%
+```
 
 👤 Author
 
 David Cohn Lifshitz
+
 Automation Test Engineer
+
 📫 david.kon@gmail.com
